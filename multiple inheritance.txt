@@ -1,0 +1,19 @@
+class father:
+    def __init__(self):
+        self.father_property = 100000000
+
+class mother:
+    def __init__(self):
+        self.mother_property = 200000000
+
+
+class child(father, mother):
+    def __init__(self):
+        father.__init__(self)
+        mother.__init__(self)
+        self.my_property = self.father_property + self.mother_property
+
+usha = child()     
+print(usha.my_property)
+    
+    
